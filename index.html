@@ -171,6 +171,59 @@
       margin-top: 16px;
     }
 
+    .project {
+      margin-top: 28px;
+      padding: 28px;
+      background: white;
+      border: 1px solid #dde5ec;
+      border-radius: 12px;
+    }
+
+    .project h3 {
+      margin: 10px 0 14px;
+      color: #18344a;
+      font-size: 23px;
+    }
+
+    .project figure {
+      margin: 22px 0;
+    }
+
+    .project-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #dde5ec;
+      border-radius: 8px;
+    }
+
+    .project figcaption {
+      margin-top: 10px;
+      color: #586779;
+      font-size: 14px;
+    }
+
+    .project-details {
+      margin: 0;
+    }
+
+    .project-details dt {
+      margin-top: 16px;
+      color: #18344a;
+      font-weight: bold;
+    }
+
+    .project-details dd {
+      margin: 4px 0 0;
+    }
+
+    .image-link {
+      display: inline-block;
+      margin-top: 18px;
+      color: #18344a;
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
       padding: 30px 24px;
@@ -188,7 +241,8 @@
         padding: 50px 24px;
       }
 
-      .panel {
+      .panel,
+      .project {
         padding: 22px;
       }
 
@@ -284,8 +338,60 @@
           </p>
         </article>
       </div>
+
+      <article class="project">
+        <div class="number">QGIS · 실습 결과물</div>
+        <h3>평택시 일부 지역 도로중심선 시각화</h3>
+        <p>
+          QGIS에서 도로중심선 데이터를 불러오고,
+          VWorld 배경지도 위에 겹쳐 표시한 실습입니다.
+          도로를 짙은 남색으로 표현해 주변 지형과 함께
+          도로망의 형태를 살펴볼 수 있도록 했습니다.
+        </p>
+
+        <figure>
+          <a href="pyeongtaek_roads.png">
+            <img
+              class="project-image"
+              src="pyeongtaek_roads.png"
+              alt="VWorld 배경지도 위에 짙은 남색으로 표시한 평택시 일부 지역의 도로중심선"
+              loading="lazy"
+              width="1362"
+              height="802"
+            >
+          </a>
+          <figcaption>
+            짙은 남색 선: 도로중심선 · 배경지도: VWorld Street
+            · 화면에 표시된 일부 지역의 실습 결과입니다.
+          </figcaption>
+        </figure>
+
+        <dl class="project-details">
+          <dt>사용 도구와 자료</dt>
+          <dd>
+            QGIS, 도로중심선 GeoPackage 파일, VWorld Street 배경지도
+          </dd>
+
+          <dt>실습 내용</dt>
+          <dd>
+            도로중심선 레이어 불러오기, 배경지도와 중첩하기,
+            선 색상 설정하기, 지도 이미지로 내보내기를 진행했습니다.
+          </dd>
+
+          <dt>지도를 보며 살펴본 점</dt>
+          <dd>
+            도로가 촘촘하게 모인 곳과 격자 모양으로 뻗은 곳을
+            지도에서 구분해 볼 수 있었습니다.
+          </dd>
+        </dl>
+
+        <a class="image-link" href="pyeongtaek_roads.png">
+          지도 원본 크게 보기 →
+        </a>
+      </article>
+
       <p class="note">
-        학습 결과물과 실습 사진은 수업 진행에 맞춰 추가할 예정입니다.
+        다른 학습 결과물과 실습 사진도 수업 진행에 맞춰 추가할 예정입니다.
       </p>
     </section>
 
