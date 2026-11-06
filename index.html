@@ -5,13 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>이명주 | 나의 포트폴리오</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -56,9 +52,7 @@
       font-size: 15px;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    a:hover { text-decoration: underline; }
 
     a:focus-visible {
       outline: 3px solid #e9ac53;
@@ -128,13 +122,8 @@
       border-radius: 12px;
     }
 
-    .panel p:first-child {
-      margin-top: 0;
-    }
-
-    .panel p:last-child {
-      margin-bottom: 0;
-    }
+    .panel p:first-child { margin-top: 0; }
+    .panel p:last-child { margin-bottom: 0; }
 
     .cards {
       display: grid;
@@ -161,9 +150,7 @@
       color: #18344a;
     }
 
-    .card p {
-      margin-bottom: 0;
-    }
+    .card p { margin-bottom: 0; }
 
     .note {
       color: #586779;
@@ -185,9 +172,7 @@
       font-size: 23px;
     }
 
-    .project figure {
-      margin: 22px 0;
-    }
+    .project figure { margin: 22px 0; }
 
     .project-image {
       display: block;
@@ -217,9 +202,7 @@
       font-size: 14px;
     }
 
-    .project-details {
-      margin: 0;
-    }
+    .project-details { margin: 0; }
 
     .project-details dt {
       margin-top: 16px;
@@ -227,9 +210,7 @@
       font-weight: bold;
     }
 
-    .project-details dd {
-      margin: 4px 0 0;
-    }
+    .project-details dd { margin: 4px 0 0; }
 
     .image-link {
       display: inline-block;
@@ -247,22 +228,10 @@
     }
 
     @media (max-width: 700px) {
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 50px 24px;
-      }
-
-      .panel,
-      .project {
-        padding: 22px;
-      }
-
-      nav {
-        gap: 14px;
-      }
+      .cards { grid-template-columns: 1fr; }
+      .hero { padding: 50px 24px; }
+      .panel, .project { padding: 22px; }
+      nav { gap: 14px; }
     }
   </style>
 </head>
@@ -274,6 +243,7 @@
         <a href="#about">자기소개</a>
         <a href="#experience">나의 경험</a>
         <a href="#learning">학습 활동</a>
+        <a href="#auction">자동차 경매</a>
         <a href="#goals">앞으로의 목표</a>
       </nav>
     </div>
@@ -385,13 +355,11 @@
           <dd>
             QGIS, 도로중심선 GeoPackage 파일, VWorld Street 배경지도
           </dd>
-
           <dt>실습 내용</dt>
           <dd>
             도로중심선 레이어 불러오기, 배경지도와 중첩하기,
             선 색상 설정하기, 지도 이미지로 내보내기를 진행했습니다.
           </dd>
-
           <dt>지도를 보며 살펴본 점</dt>
           <dd>
             도로가 촘촘하게 모인 곳과 격자 모양으로 뻗은 곳을
@@ -453,7 +421,6 @@
         <dl class="project-details">
           <dt>작품의 주인공</dt>
           <dd>큰아들의 아들인 제 손자입니다.</dd>
-
           <dt>제작 의도</dt>
           <dd>
             제가 일군 사업 터전이 다음 세대의 삶을 든든하게
@@ -470,6 +437,71 @@
       <p class="note">
         다른 학습 결과물과 실습 사진도 수업 진행에 맞춰 추가할 예정입니다.
       </p>
+    </section>
+
+    <section id="auction">
+      <h2>자동차 경매</h2>
+      <article class="project">
+        <div class="number">자동차 현장 경험 · 새로운 도전</div>
+        <h3>자동차 현장 경험을 경매 차량 검토로</h3>
+        <p>
+          오랫동안 자동차 업종에서 쌓은 경험을 바탕으로
+          법원경매 자동차에 관심을 갖고 있습니다.
+          차량의 상태와 시세를 비교하고,
+          매입과 판매 가능성을 검토하는 과정을 기록하려고 합니다.
+        </p>
+
+        <figure>
+          <a href="auction_truck.png">
+            <img
+              class="project-image"
+              src="auction_truck.png"
+              alt="자동차 경매 관심 분야 소개를 위한 흰색 기아 트럭 전면 사진"
+              loading="lazy"
+            >
+          </a>
+          <figcaption>
+            자동차 현장 경험을 소개하는 차량 사진입니다.
+            번호판은 가림 처리했습니다.
+          </figcaption>
+        </figure>
+
+        <dl class="project-details">
+          <dt>관심을 갖게 된 계기</dt>
+          <dd>
+            자동차 현장에서 익힌 경험을 새로운 분야에 활용하고,
+            차량의 가치를 자료와 함께 판단해 보고 싶었습니다.
+          </dd>
+
+          <dt>차량 상태 확인</dt>
+          <dd>
+            외관과 실내, 주행거리, 정비 이력 등 확인할 수 있는
+            정보를 모아 차량 상태를 살펴보는 데 중점을 두고자 합니다.
+          </dd>
+
+          <dt>시세 비교</dt>
+          <dd>
+            같은 차종의 연식, 주행거리, 등급, 용도 등이 비슷한
+            매물을 비교해 가격 차이가 생기는 이유를 살펴보고자 합니다.
+          </dd>
+
+          <dt>매입·판매 가능성 검토</dt>
+          <dd>
+            매입가격뿐 아니라 운송, 정비, 이전 등 예상되는 비용과
+            판매에 걸리는 시간도 함께 검토하고자 합니다.
+          </dd>
+
+          <dt>앞으로의 기록</dt>
+          <dd>
+            실제로 검토한 차량의 자료와 시세 비교 내용을
+            차근차근 정리해 이곳에 추가하겠습니다.
+          </dd>
+        </dl>
+
+        <a class="image-link" href="auction_truck.png">
+          차량 사진 크게 보기 →
+        </a>
+      </article>
     </section>
 
     <section id="goals">
