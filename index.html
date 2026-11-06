@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이명주 | 나의 포트폴리오</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "맑은 고딕", sans-serif;
+      color: #253247;
+      background: #f5f7fa;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #18344a;
+      color: white;
+      padding: 22px 24px;
+    }
+
+    .header-inner {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .site-name {
+      color: white;
+      text-decoration: none;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #e4edf4;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #e9ac53;
+      outline-offset: 5px;
+    }
+
+    .hero {
+      background: #e8eff3;
+      padding: 80px 24px;
+    }
+
+    .hero-inner {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #426779;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+
+    h1 {
+      margin: 16px 0 20px;
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.5;
+      color: #18344a;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 11px 23px;
+      background: #18344a;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    main {
+      max-width: 1048px;
+      margin: auto;
+      padding: 24px;
+    }
+
+    section {
+      margin: 40px 0;
+      scroll-margin-top: 24px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 27px;
+      color: #18344a;
+    }
+
+    .panel {
+      padding: 28px;
+      background: white;
+      border: 1px solid #dde5ec;
+      border-radius: 12px;
+    }
+
+    .panel p:first-child {
+      margin-top: 0;
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      padding: 25px;
+      background: white;
+      border: 1px solid #dde5ec;
+      border-radius: 12px;
+    }
+
+    .number {
+      color: #55798c;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .card h3 {
+      margin: 12px 0;
+      font-size: 20px;
+      color: #18344a;
+    }
+
+    .card p {
+      margin-bottom: 0;
+    }
+
+    .note {
+      color: #586779;
+      font-size: 14px;
+      margin-top: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 24px;
+      background: #18344a;
+      color: #e4edf4;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 50px 24px;
+      }
+
+      .panel {
+        padding: 22px;
+      }
+
+      nav {
+        gap: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="site-name" href="#">이명주 포트폴리오</a>
+      <nav aria-label="주요 메뉴">
+        <a href="#about">자기소개</a>
+        <a href="#experience">나의 경험</a>
+        <a href="#learning">학습 활동</a>
+        <a href="#goals">앞으로의 목표</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">LEE MYUNG JU · PORTFOLIO</div>
+      <h1>현장의 경험 위에<br>새로운 배움을 더합니다.</h1>
+      <p>
+        안녕하세요. 이명주입니다.<br>
+        오랫동안 자동차 업종에서 일했고, 지금은
+        서울사이버대학교 AI부동산빅데이터학과에서
+        부동산과 데이터, 인공지능을 공부하고 있습니다.
+      </p>
+      <a class="button" href="#learning">나의 학습 활동 보기</a>
+    </div>
+  </div>
+
+  <main>
+    <section id="about">
+      <h2>자기소개</h2>
+      <div class="panel">
+        <p>
+          저는 한국타이어 TBX 트럭버스 타이어 전문점을
+          오랫동안 운영했습니다. 현장에서 다양한 고객을 만나며
+          성실함과 신뢰의 중요성을 배웠습니다.
+        </p>
+        <p>
+          두 아들에게 사업을 물려준 뒤에는 새로운 공부에 도전하고
+          있습니다. 처음 접하는 용어와 프로그램이 어렵기도 하지만,
+          직접 실습하며 하나씩 배워 가고 있습니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>나의 경험</h2>
+      <div class="panel">
+        <p><strong>자동차 현장과 사업 운영</strong></p>
+        <p>
+          트럭과 버스 타이어 전문점을 운영하며 차량 관리,
+          고객 응대, 매장 운영 경험을 쌓았습니다.
+          이러한 현장 경험을 앞으로 배우는 지식과 연결하고 싶습니다.
+        </p>
+      </div>
+    </section>
+
+    <section id="learning">
+      <h2>학습 활동</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="number">01 · GIS</div>
+          <h3>QGIS 공간정보 실습</h3>
+          <p>
+            지도에 데이터를 표시하고, 지역의 특성과
+            공간적인 관계를 살펴보는 방법을 배우고 있습니다.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="number">02 · DATA</div>
+          <h3>부동산·상권분석</h3>
+          <p>
+            인구와 사업체 등 여러 자료를 통해
+            지역과 상권을 이해하는 방법을 공부하고 있습니다.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="number">03 · AI</div>
+          <h3>생성 AI 활용</h3>
+          <p>
+            생성 AI를 활용한 글쓰기와 영상 제작을 실습하며
+            새로운 도구의 활용 방법을 익히고 있습니다.
+          </p>
+        </article>
+      </div>
+      <p class="note">
+        학습 결과물과 실습 사진은 수업 진행에 맞춰 추가할 예정입니다.
+      </p>
+    </section>
+
+    <section id="goals">
+      <h2>앞으로의 목표</h2>
+      <div class="panel">
+        <p>
+          자동차 업종에서 쌓은 경험에 부동산과 데이터 분석 지식을
+          더하고 싶습니다. 배운 내용을 부동산 분석과 자동차 경매에
+          활용할 수 있도록 꾸준히 공부하겠습니다.
+        </p>
+        <p>
+          이 홈페이지에는 공부하는 과정과 직접 만든 결과물을
+          차근차근 기록하겠습니다.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 이명주 · GitHub Pages 개인 포트폴리오
+  </footer>
+</body>
+</html>
