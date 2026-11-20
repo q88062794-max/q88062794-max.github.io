@@ -1,13 +1,25 @@
-# lmj651203-github-io
+# 이명주의 GitHub 포트폴리오
 
-환영합니다.
+안녕하세요. 서울사이버대학교 AI부동산빅데이터학과에서 공부하는 이명주입니다. 한국타이어 TBX 트럭·버스 타이어 전문점을 운영하며 쌓은 경험과 대학에서 배운 공간정보·데이터 분석 실습을 이곳에 기록합니다.
 
-| layout | title | date | comments | archive |
-| --- | --- | --- | --- | --- |
-| post | Hello world | 2014-03-27 | true | false |
+**[공개 포트폴리오 보기](https://q88062794-max.github.io/)**
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+## 주요 작품과 활동
 
-Totam quasi maxime quas repudiandae nam id temporibus, at et non officiis consectetur voluptate deserunt officia minima placeat tempore illum asperiores quo assumenda praesentium? Facilis libero error ratione doloribus debitis delectus asperiores minima ab velit quam. Natus ea, vero totam recusandae autem, corporis minima, animi eos perferendis omnis ut asperiores magni tempore. Repellendus aliquam saepe perspiciatis laborum, excepturi sit libero dignissimos debitis eaque itaque quos, accusantium sed amet tempora temporibus perferendis possimus, quisquam minus fuga! Laudantium, tenetur, consectetur! Quas itaque hic consequatur accusamus consectetur, quia odio eos amet quasi pariatur! Ratione, similique.
+| 작품·활동 | 내용 | 바로가기 |
+| --- | --- | --- |
+| 평택시 일부 지역 도로중심선 시각화 | QGIS에서 도로중심선과 VWorld 배경지도를 겹쳐 도로망을 시각화했습니다. | [지도 원본 보기](https://q88062794-max.github.io/pyeongtaek_roads.png) |
+| 내가 일군 터전, 아들이 이어갈 행복 | TBX 사업을 이어가는 가족의 이야기를 간판 이미지와 손자가 등장하는 영상으로 담았습니다. | [영상 작품 보기](https://q88062794-max.github.io/#learning) |
+| 자동차 경매 | 차량 상태, 유사 매물 시세, 운송·정비·이전 비용 등 경매 차량을 검토할 때 살펴보는 항목을 정리했습니다. | [자동차 경매 소개 보기](https://q88062794-max.github.io/#auction) |
 
-# Wangana - Jekyll Theme
+## 사용 도구
+
+- **HTML·CSS**로 포트폴리오의 메뉴와 화면을 구성했습니다.
+- **Markdown**으로 이 저장소의 소개와 작품 목록을 정리했습니다.
+- **QGIS·VWorld**를 활용해 평택시 도로망을 시각화했습니다.
+- **GitHub Pages**로 포트폴리오를 공개했습니다.
+
+## 관련 문서
+
+- [프로젝트 위키](https://github.com/q88062794-max/q88062794-max.github.io/wiki)
+- [포트폴리오 화면 코드](index.html)
