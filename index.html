@@ -60,8 +60,22 @@
     }
 
     .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
       background: #e8eff3;
       padding: 80px 24px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: -8px;
+      background:
+        linear-gradient(90deg, rgba(232, 239, 243, 0.94), rgba(232, 239, 243, 0.68)),
+        url("pyeongtaek_roads.png") center / cover no-repeat;
+      filter: blur(2px);
     }
 
     .hero-inner {
