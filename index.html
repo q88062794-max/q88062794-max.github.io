@@ -3,247 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이명주 | 나의 포트폴리오</title>
+  <title>이명주 포트폴리오 | QGIS 공간정보와 자동차 현장 경험</title>
+  <meta name="description" content="이명주의 개인 포트폴리오. 평택시 도로망 QGIS 실습, TBX 가족 영상, 자동차 경매 차량 검토 활동을 소개합니다.">
   <style>
+    :root {
+      --ink: #152c2a;
+      --muted: #435b55;
+      --paper: #f5f4ec;
+      --line: #d6ded4;
+      --green: #174b3a;
+      --lime: #d9ebaf;
+      --width: 1120px;
+    }
     * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
-      font-family: "맑은 고딕", sans-serif;
-      color: #253247;
-      background: #f5f7fa;
-      line-height: 1.8;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "맑은 고딕", "Apple SD Gothic Neo", system-ui, sans-serif;
+      line-height: 1.75;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
     }
-
-    header {
-      background: #18344a;
-      color: white;
-      padding: 22px 24px;
-    }
-
-    .header-inner {
-      max-width: 1000px;
-      margin: auto;
+    a { color: var(--green); text-underline-offset: .24em; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid #b96c22; outline-offset: 4px; }
+    .header-inner, .hero-inner, main { width: min(var(--width), calc(100% - 48px)); margin-inline: auto; }
+    header { background: var(--ink); color: white; padding: 18px 0; }
+    .header-inner, nav, .hero-actions {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 12px 22px;
     }
-
-    .site-name {
-      color: white;
-      text-decoration: none;
-      font-size: 21px;
-      font-weight: bold;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    nav a {
-      color: #e4edf4;
-      text-decoration: none;
-      font-size: 15px;
-    }
-
-    a:hover { text-decoration: underline; }
-
-    a:focus-visible {
-      outline: 3px solid #e9ac53;
-      outline-offset: 5px;
-    }
-
+    .header-inner { justify-content: space-between; }
+    .site-name { color: white; font-weight: 800; text-decoration: none; }
+    nav a { color: #f2f7ee; font-size: .9rem; text-decoration: none; }
+    nav a:hover, .site-name:hover { text-decoration: underline; }
     .hero {
-      background-color: #e8eff3;
-      background-image:
-        linear-gradient(90deg, #e8eff3 8%, rgba(232, 239, 243, 0.92) 35%,
-          rgba(232, 239, 243, 0.76) 55%, rgba(232, 239, 243, 0.12) 82%,
-          rgba(232, 239, 243, 0.04)),
-        url("pyeongtaek_roads.png");
-      background-position: center;
-      background-size: cover;
-      padding: 80px 24px;
+      color: white;
+      background: var(--ink);
+      border-bottom: 5px solid var(--lime);
+      padding: clamp(40px, 7vw, 92px) 0;
     }
-
     .hero-inner {
-      max-width: 1000px;
-      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: clamp(24px, 5vw, 72px);
     }
-
-    .eyebrow {
-      color: #426779;
-      font-weight: bold;
-      letter-spacing: 2px;
-      font-size: 14px;
-    }
-
-    h1 {
-      margin: 16px 0 20px;
-      font-size: clamp(30px, 5vw, 46px);
-      line-height: 1.5;
-      color: #18344a;
-    }
-
-    .hero p {
-      max-width: 700px;
-      font-size: 18px;
-    }
-
+    .eyebrow { color: var(--lime); font-weight: 800; font-size: .83rem; letter-spacing: .13em; }
+    h1 { margin: 12px 0 16px; line-height: 1.2; font-size: clamp(2rem, 4.8vw, 3.8rem); letter-spacing: -.05em; }
+    .hero p { max-width: 34rem; color: #e2ebe3; }
+    .hero-map { margin: 0; min-width: 0; }
+    .hero-map img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid #a8baa9; }
+    .hero-map figcaption { color: #e2ebe3; margin-top: 8px; }
+    .hero-map figcaption a { color: inherit; }
     .button {
       display: inline-block;
-      margin-top: 18px;
-      padding: 11px 23px;
-      background: #18344a;
-      color: white;
+      padding: 9px 16px;
+      border: 1px solid var(--lime);
+      border-radius: 8px;
+      background: var(--lime);
+      color: var(--ink);
+      font-weight: 800;
       text-decoration: none;
-      border-radius: 8px;
     }
-
-    main {
-      max-width: 1048px;
-      margin: auto;
-      padding: 24px;
+    .button-secondary { color: white; background: transparent; }
+    main { padding: 0 0 56px; }
+    section, .project, #featured-title { scroll-margin-top: 24px; }
+    section { margin-top: clamp(34px, 6vw, 68px); }
+    h2 { margin: 0 0 16px; font-size: clamp(1.6rem, 3vw, 2.1rem); letter-spacing: -.04em; }
+    .panel, .card, .project {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: clamp(18px, 3vw, 32px);
     }
-
-    section {
-      margin: 40px 0;
-      scroll-margin-top: 24px;
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      font-size: 27px;
-      color: #18344a;
-    }
-
-    .panel {
-      padding: 28px;
-      background: white;
-      border: 1px solid #dde5ec;
-      border-radius: 12px;
-    }
-
     .panel p:first-child { margin-top: 0; }
-    .panel p:last-child { margin-bottom: 0; }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      padding: 25px;
-      background: white;
-      border: 1px solid #dde5ec;
-      border-radius: 12px;
-    }
-
-    .number {
-      color: #55798c;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .card h3 {
-      margin: 12px 0;
-      font-size: 20px;
-      color: #18344a;
-    }
-
-    .card p { margin-bottom: 0; }
-
-    .note {
-      color: #586779;
-      font-size: 14px;
-      margin-top: 16px;
-    }
-
-    .project {
-      margin-top: 28px;
-      padding: 28px;
-      background: white;
-      border: 1px solid #dde5ec;
-      border-radius: 12px;
-    }
-
-    .project h3 {
-      margin: 10px 0 14px;
-      color: #18344a;
-      font-size: 23px;
-    }
-
+    .panel p:last-child, .card p:last-child { margin-bottom: 0; }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .featured-card { display: flex; flex-direction: column; gap: 6px; color: inherit; text-decoration: none; border-top: 4px solid var(--green); }
+    .featured-card:hover { background: #f1f6e8; }
+    .featured-card:hover h3 { text-decoration: underline; }
+    .featured-card span:last-child { margin-top: auto; color: var(--green); font-weight: 700; }
+    .number { color: var(--green); font-weight: 800; font-size: .85rem; }
+    h3 { margin: 7px 0; line-height: 1.4; }
+    .project { margin-top: 20px; }
+    .project h3 { font-size: clamp(1.3rem, 2.6vw, 1.8rem); }
     .project figure { margin: 22px 0; }
-
-    .project-image {
-      display: block;
-      width: 100%;
-      height: auto;
-      border: 1px solid #dde5ec;
-      border-radius: 8px;
-    }
-
-    .sign-image {
-      max-width: 680px;
-      margin: auto;
-    }
-
-    .project-video {
-      display: block;
-      width: 100%;
-      max-height: 650px;
-      margin: auto;
-      background: #101820;
-      border-radius: 8px;
-    }
-
-    .project figcaption {
-      margin-top: 10px;
-      color: #586779;
-      font-size: 14px;
-    }
-
+    .project-image, .project-video { display: block; width: 100%; border-radius: 10px; }
+    .project-image { height: auto; border: 1px solid var(--line); }
+    .sign-image { max-width: 680px; margin-inline: auto; }
+    .project-video { max-height: 600px; background: #131917; }
+    figcaption, .note { color: var(--muted); font-size: .88rem; }
+    figcaption { margin-top: 10px; }
     .project-details { margin: 0; }
-
-    .project-details dt {
-      margin-top: 16px;
-      color: #18344a;
-      font-weight: bold;
-    }
-
-    .project-details dd { margin: 4px 0 0; }
-
-    .image-link {
-      display: inline-block;
-      margin-top: 18px;
-      color: #18344a;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 24px;
-      background: #18344a;
-      color: #e4edf4;
-      font-size: 14px;
-    }
-
-    @media (max-width: 700px) {
-      .cards { grid-template-columns: 1fr; }
-      .hero {
-        padding: 50px 24px;
-        background-image:
-          linear-gradient(rgba(232, 239, 243, 0.88), rgba(232, 239, 243, 0.62)),
-          url("pyeongtaek_roads.png");
-      }
-      .panel, .project { padding: 22px; }
-      nav { gap: 14px; }
+    .project-details dt { margin-top: 12px; color: var(--green); font-weight: 800; }
+    .project-details dd { margin: 3px 0 0; }
+    .image-link { display: inline-block; margin-top: 16px; font-weight: 800; }
+    footer { background: var(--ink); color: #e2ebe3; text-align: center; padding: 24px; font-size: .9rem; }
+    @media (max-width: 760px) {
+      .hero-inner, .cards { grid-template-columns: 1fr; }
+      .header-inner, .hero-inner, main { width: calc(100% - 32px); }
+      nav { gap: 8px 14px; }
     }
   </style>
 </head>
@@ -263,19 +126,51 @@
 
   <div class="hero">
     <div class="hero-inner">
-      <div class="eyebrow">LEE MYUNG JU · PORTFOLIO</div>
-      <h1>현장의 경험 위에<br>새로운 배움을 더합니다.</h1>
-      <p>
-        안녕하세요. 이명주입니다.<br>
-        오랫동안 자동차 업종에서 일했고, 지금은
-        서울사이버대학교 AI부동산빅데이터학과에서
-        부동산과 데이터, 인공지능을 공부하고 있습니다.
-      </p>
-      <a class="button" href="#learning">나의 학습 활동 보기</a>
+      <div>
+        <div class="eyebrow">LEE MYUNG JU · PORTFOLIO</div>
+        <h1>현장의 경험 위에<br>새로운 배움을 더합니다.</h1>
+        <p>
+          안녕하세요. 이명주입니다.<br>
+          오랫동안 자동차 업종에서 일했고, 지금은
+          서울사이버대학교 AI부동산빅데이터학과에서
+          부동산과 데이터, 인공지능을 공부하고 있습니다.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#featured-title">대표 작품 보기</a>
+          <a class="button button-secondary" href="https://github.com/q88062794-max/q88062794-max.github.io">GitHub 저장소</a>
+        </div>
+      </div>
+      <figure class="hero-map">
+        <a href="#qgis" aria-label="평택시 도로망 실습 상세 보기">
+          <img src="pyeongtaek_roads.png" width="1362" height="802" alt="VWorld 배경지도 위에 짙은 남색으로 표시한 평택시 일부 지역 도로망">
+        </a>
+        <figcaption><a href="#qgis">평택시 일부 지역 도로망 · QGIS 실습</a></figcaption>
+      </figure>
     </div>
   </div>
 
   <main>
+    <section aria-labelledby="featured-title">
+      <h2 id="featured-title">대표 작품과 활동</h2>
+      <div class="cards">
+        <a class="card featured-card" href="#qgis">
+          <span class="number">QGIS · VWorld</span>
+          <h3>평택시 일부 지역 도로망 시각화</h3>
+          <span>지도와 실습 과정 보기 →</span>
+        </a>
+        <a class="card featured-card" href="#family-video">
+          <span class="number">생성 AI · 이미지와 영상</span>
+          <h3>내가 일군 터전, 아들이 이어갈 행복</h3>
+          <span>가족 영상 보기 →</span>
+        </a>
+        <a class="card featured-card" href="#auction">
+          <span class="number">자동차 현장 경험</span>
+          <h3>자동차 경매 차량 검토</h3>
+          <span>차량 검토 항목 보기 →</span>
+        </a>
+      </div>
+    </section>
+
     <section id="about">
       <h2>자기소개</h2>
       <div class="panel">
@@ -308,7 +203,7 @@
       <h2>학습 활동</h2>
       <div class="cards">
         <article class="card">
-          <div class="number">01 · GIS</div>
+          <div class="number">GIS</div>
           <h3>QGIS 공간정보 실습</h3>
           <p>
             지도에 데이터를 표시하고, 지역의 특성과
@@ -317,7 +212,7 @@
         </article>
 
         <article class="card">
-          <div class="number">02 · DATA</div>
+          <div class="number">DATA</div>
           <h3>부동산·상권분석</h3>
           <p>
             인구와 사업체 등 여러 자료를 통해
@@ -326,7 +221,7 @@
         </article>
 
         <article class="card">
-          <div class="number">03 · AI</div>
+          <div class="number">AI</div>
           <h3>생성 AI 활용</h3>
           <p>
             생성 AI를 활용한 글쓰기와 영상 제작을 실습하며
@@ -335,7 +230,7 @@
         </article>
       </div>
 
-      <article class="project">
+      <article class="project" id="qgis">
         <div class="number">QGIS · 실습 결과물</div>
         <h3>평택시 일부 지역 도로중심선 시각화</h3>
         <p>
@@ -384,7 +279,7 @@
         </a>
       </article>
 
-      <article class="project">
+      <article class="project" id="family-video">
         <div class="number">생성 AI · 이미지와 영상 작품</div>
         <h3>내가 일군 터전, 아들이 이어갈 행복</h3>
         <p>
