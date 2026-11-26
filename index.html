@@ -109,6 +109,43 @@
       .header-inner, .hero-inner, main { width: calc(100% - 32px); }
       nav { gap: 8px 14px; }
     }
+
+    /* 첫 화면과 대표 작품의 포인트 색상 */
+    header { background: #171d3b; }
+    .hero {
+      background: linear-gradient(118deg, #123e43 0%, #20345a 57%, #462d66 100%);
+      border-bottom-color: #44dbc4;
+    }
+    .eyebrow { color: #8ff3da; }
+    .hero-map img {
+      border-color: #92e8de;
+      box-shadow: 0 16px 42px #10152980;
+    }
+    .button {
+      background: #8ff3da;
+      border-color: #8ff3da;
+      color: #122f35;
+    }
+    .button:hover { background: #b6fae9; }
+    .button-secondary { background: transparent; color: #fff; }
+    .button-secondary:hover { background: #ffffff21; }
+    .featured-card {
+      --accent: #147a70;
+      --tint: #e3f7f1;
+      border-top-color: var(--accent);
+      background: linear-gradient(150deg, var(--tint), #fff 80%);
+    }
+    .featured-card[href="#family-video"] {
+      --accent: #7541a1;
+      --tint: #f2e7fc;
+    }
+    .featured-card[href="#auction"] {
+      --accent: #9b491c;
+      --tint: #fff0dc;
+    }
+    .featured-card .number, .featured-card span:last-child { color: var(--accent); }
+    .featured-card:hover { background: var(--tint); }
+    footer { background: #171d3b; }
   </style>
 </head>
 <body>
